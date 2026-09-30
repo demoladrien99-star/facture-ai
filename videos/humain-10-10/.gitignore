@@ -4,3 +4,4 @@ renders/*.log
 snapshots/
 .hyperframes/
 audio-src/vo_raw.wav
+renders/work-*/
