@@ -22,7 +22,7 @@ SCENES = [
     ("s07-cta", ["8"]),
 ]
 LEAD = {"s01-hook": 2 * SIX}
-SENT_GAP = 0.06
+SENT_GAP = 0.12
 LINE_GAP = 0.40
 TAIL = 0.30
 FIXED_BEATS = {"s06-recap": 10}

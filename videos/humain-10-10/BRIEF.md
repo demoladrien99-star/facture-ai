@@ -7,9 +7,9 @@ destination: tiktok
 aspect: 1080x1920
 language: fr
 audience: "Garçons 15-20 ans, sport et self-improvement"
-length: 50s
+length: 57s
 angle: listicle
-voice: piper fr-gilles-low (masculine, local)
+voice: piper fr_FR-tom-medium (masculine, local, vérifiée par ASR)
 ---
 
 ## Intent
@@ -31,4 +31,6 @@ animés, icônes minimalistes au trait, texte révélé par masque, coupes sèch
 
 - Pas d'emoji, pas de dégradé coloré, pas de glassmorphism, pas de 3D.
 - « Plus que 99% de tes potes » remplacé par « 12 de plus que tes potes. » (règle : aucun chiffre inventé).
-- Voix off : les répliques sont celles du script ; « 50 » est prononcé « cinquante ».
+- Voix off : texte du script, avec trois ajustements de diction pour la voix seulement (l'écran ne change pas) :
+  « bodybuilder » → prononcé « bodibildeur », « Lis dix pages » → « Lire dix pages »,
+  « Huit heures, pas sept » → « Huit heures, et pas sept » (sinon entendu « passée »).
