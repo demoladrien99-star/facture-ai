@@ -14,7 +14,7 @@ hosts = "\n".join(
 audio = "\n".join(
     f'      <audio id="a-{n}" src="assets/audio/{n}.wav" data-start="0" data-duration="{total}" '
     f'data-track-index="{i}" data-volume="1"></audio>'
-    for i, n in ((10, "vo"), (11, "music"), (12, "sfx")))
+    for i, n in ((10, "vo"), (12, "sfx")))
 
 html = f"""<!doctype html>
 <html lang="fr">

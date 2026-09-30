@@ -25,7 +25,7 @@ animés, icônes minimalistes au trait, texte révélé par masque, coupes sèch
 - Composants reproduits à la main (façon 21st.dev) dans `assets/hf10.js` : Text Rotate
   (S01, S05), Number Ticker (S02, S04), Animated List (S03, S05), Border Beam (S02, S06),
   Shimmer Button (S07).
-- Musique phonk 110 BPM, SFX (whoosh / impact / pop / confirm) synthétisés localement.
+- Sans musique (demande utilisateur) : voix off + SFX (whoosh / impact / pop / confirm) synthétisés localement. La grille 110 BPM reste la base du rythme des coupes.
 
 ## Notes
 

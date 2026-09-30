@@ -2,7 +2,7 @@
 format: 1080x1920
 duration: 52.36
 bpm: 110
-music: dark phonk driving beat, heavy kick, no vocals, 110 BPM (synthétisée, tools/build_audio.py)
+music: none (voix + SFX uniquement, à la demande)
 ---
 
 # Storyboard — Deviens un humain 10/10
@@ -20,5 +20,4 @@ chaque reveal est calé sur le début de la phrase correspondante de la voix off
 | S06 | Récap — LA FORMULE 10/10 (bento 2×2) | 40.36 | 5.45 | 10 | cases en vol, Border Beam |
 | S07 | CTA — ABONNE-TOI. / DISCORD EN BIO | 45.82 | 6.55 | 12 | Shimmer Button, fondu final |
 
-Musique : groove complet de S01 à S06, stop d'un temps avant le CTA, retombée
-(cloche filtrée + sub) sous S07, fondu 1 s.
+Pas de musique : la bande-son finale = voix off + SFX (whoosh, impacts, pops, confirmation).

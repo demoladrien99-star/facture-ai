@@ -5,7 +5,7 @@ no network, fixed RNG seed, so the same inputs always give the same stems.
 
 Outputs (48 kHz, 16-bit):
   assets/audio/vo.wav     narration, EQ + compression
-  assets/audio/music.wav  dark phonk bed, ~10 dB under the voice
+  assets/audio/music.wav  dark phonk bed, ~10 dB under the voice (only with HF_MUSIC=1)
   assets/audio/sfx.wav    whooshes / impacts / pops / confirm, under the voice
 """
 import json, os, subprocess, tempfile
@@ -20,6 +20,8 @@ TOTAL = T["total"]
 N = int(round(TOTAL * SR))
 rng = np.random.default_rng(1010)
 SC = {s["id"]: s for s in T["scenes"]}
+# Final cut is voice + SFX only (no music bed); set HF_MUSIC=1 to rebuild the phonk stem.
+WITH_MUSIC = os.environ.get("HF_MUSIC") == "1"
 
 
 def db(x):
@@ -293,15 +295,17 @@ def main():
     os.makedirs(os.path.join(ROOT, "assets/audio"), exist_ok=True)
     vo = build_vo()
     vo_level = rms_db(vo)
-    music = build_music()
-    music *= db(vo_level - 10 - rms_db(music))
+    stems = {}
+    if WITH_MUSIC:
+        music = build_music()
+        stems["music"] = music * db(vo_level - 10 - rms_db(music))
     sfx = build_sfx()
-    sfx *= db(vo_level - 12 - rms_db(sfx))
-    for name, x in (("music", music), ("sfx", sfx)):
+    stems["sfx"] = sfx * db(vo_level - 12 - rms_db(sfx))
+    for name, x in stems.items():
         sf.write(os.path.join(ROOT, f"assets/audio/{name}.wav"), np.clip(x, -1, 1), SR,
                  subtype="PCM_16")
-    print(f"vo {vo_level:.1f} dBFS rms | music {rms_db(music):.1f} | sfx {rms_db(sfx):.1f}"
-          f" | {TOTAL:.2f}s")
+    print(f"vo {vo_level:.1f} dBFS rms | " + " | ".join(
+        f"{k} {rms_db(v):.1f}" for k, v in stems.items()) + f" | {TOTAL:.2f}s")
 
 
 if __name__ == "__main__":

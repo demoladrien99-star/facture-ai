@@ -7,7 +7,7 @@ Livrable : `renders/video.mp4`.
 ```bash
 python3 tools/tighten_vo.py   # (optionnel) resserre les pauses des prises Piper
 python3 tools/layout.py       # grille 110 BPM -> assets/timing.js + audio-src/timing.json
-python3 tools/build_audio.py  # voix traitée, phonk, SFX -> assets/audio/*.wav
+python3 tools/build_audio.py  # voix traitée + SFX -> assets/audio/*.wav (HF_MUSIC=1 : ajoute la phonk)
 python3 tools/assemble.py     # index.html (hôtes des 7 scènes + pistes audio)
 npx hyperframes@0.8.96 lint && npm run check
 npx hyperframes@0.8.96 render --quality high --fps 240 --output renders/v-240.mp4
