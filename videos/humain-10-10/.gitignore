@@ -1,0 +1,6 @@
+node_modules/
+renders/v-240.mp4
+renders/*.log
+snapshots/
+.hyperframes/
+audio-src/vo_raw.wav

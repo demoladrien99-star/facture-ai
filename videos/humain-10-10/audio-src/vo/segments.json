@@ -1,0 +1,156 @@
+{
+ "1": [
+  {
+   "text": "T'es à cinquante secondes de savoir exactement quoi faire pour tout changer.",
+   "file": "audio-src/vo/tight/seg1_0.wav",
+   "dur": 3.083,
+   "raw": "audio-src/vo/seg1_0.wav"
+  }
+ ],
+ "2": [
+  {
+   "text": "La salle.",
+   "file": "audio-src/vo/tight/seg2_0.wav",
+   "dur": 1.075,
+   "raw": "audio-src/vo/seg2_0.wav"
+  },
+  {
+   "text": "Trois fois par semaine minimum.",
+   "file": "audio-src/vo/tight/seg2_1.wav",
+   "dur": 1.464,
+   "raw": "audio-src/vo/seg2_1.wav"
+  },
+  {
+   "text": "Pas pour être bodybuilder.",
+   "file": "audio-src/vo/tight/seg2_2.wav",
+   "dur": 1.093,
+   "raw": "audio-src/vo/seg2_2.wav"
+  },
+  {
+   "text": "Pour ne plus te sentir petit.",
+   "file": "audio-src/vo/tight/seg2_3.wav",
+   "dur": 1.271,
+   "raw": "audio-src/vo/seg2_3.wav"
+  }
+ ],
+ "3": [
+  {
+   "text": "Deux litres d'eau par jour.",
+   "file": "audio-src/vo/tight/seg3_0.wav",
+   "dur": 1.197,
+   "raw": "audio-src/vo/seg3_0.wav"
+  },
+  {
+   "text": "Ta peau, ton énergie, ta concentration, tout change.",
+   "file": "audio-src/vo/tight/seg3_1.wav",
+   "dur": 2.729,
+   "raw": "audio-src/vo/seg3_1.wav"
+  }
+ ],
+ "4": [
+  {
+   "text": "Dors avant minuit.",
+   "file": "audio-src/vo/tight/seg4_0.wav",
+   "dur": 2.035,
+   "raw": "audio-src/vo/seg4_0.wav"
+  },
+  {
+   "text": "La testostérone monte pendant le sommeil.",
+   "file": "audio-src/vo/tight/seg4_1.wav",
+   "dur": 1.671,
+   "raw": "audio-src/vo/seg4_1.wav"
+  },
+  {
+   "text": "Huit heures, pas sept.",
+   "file": "audio-src/vo/tight/seg4_2.wav",
+   "dur": 1.073,
+   "raw": "audio-src/vo/seg4_2.wav"
+  }
+ ],
+ "5": [
+  {
+   "text": "Lis dix pages par jour.",
+   "file": "audio-src/vo/tight/seg5_0.wav",
+   "dur": 1.97,
+   "raw": "audio-src/vo/seg5_0.wav"
+  },
+  {
+   "text": "N'importe quel livre qui t'apprend quelque chose.",
+   "file": "audio-src/vo/tight/seg5_1.wav",
+   "dur": 1.899,
+   "raw": "audio-src/vo/seg5_1.wav"
+  },
+  {
+   "text": "Dans un an, t'as lu douze livres de plus que tes potes.",
+   "file": "audio-src/vo/tight/seg5_2.wav",
+   "dur": 2.311,
+   "raw": "audio-src/vo/seg5_2.wav"
+  }
+ ],
+ "6": [
+  {
+   "text": "Médite cinq minutes le matin.",
+   "file": "audio-src/vo/tight/seg6_0.wav",
+   "dur": 1.668,
+   "raw": "audio-src/vo/seg6_0.wav"
+  },
+  {
+   "text": "Pas pour être zen.",
+   "file": "audio-src/vo/tight/seg6_1.wav",
+   "dur": 0.935,
+   "raw": "audio-src/vo/seg6_1.wav"
+  },
+  {
+   "text": "Pour que ton cerveau arrête de partir dans tous les sens.",
+   "file": "audio-src/vo/tight/seg6_2.wav",
+   "dur": 2.374,
+   "raw": "audio-src/vo/seg6_2.wav"
+  }
+ ],
+ "7": [
+  {
+   "text": "Coupe les gens qui drainent ton énergie.",
+   "file": "audio-src/vo/tight/seg7_0.wav",
+   "dur": 1.663,
+   "raw": "audio-src/vo/seg7_0.wav"
+  },
+  {
+   "text": "Pas de drama.",
+   "file": "audio-src/vo/tight/seg7_1.wav",
+   "dur": 1.952,
+   "raw": "audio-src/vo/seg7_1.wav"
+  },
+  {
+   "text": "Juste distance.",
+   "file": "audio-src/vo/tight/seg7_2.wav",
+   "dur": 0.989,
+   "raw": "audio-src/vo/seg7_2.wav"
+  },
+  {
+   "text": "Ton niveau monte avec ton entourage.",
+   "file": "audio-src/vo/tight/seg7_3.wav",
+   "dur": 1.485,
+   "raw": "audio-src/vo/seg7_3.wav"
+  }
+ ],
+ "8": [
+  {
+   "text": "Abonne-toi.",
+   "file": "audio-src/vo/tight/seg8_0.wav",
+   "dur": 0.899,
+   "raw": "audio-src/vo/seg8_0.wav"
+  },
+  {
+   "text": "Le prochain conseil arrive vite.",
+   "file": "audio-src/vo/tight/seg8_1.wav",
+   "dur": 1.524,
+   "raw": "audio-src/vo/seg8_1.wav"
+  },
+  {
+   "text": "Discord en bio, rejoins maintenant.",
+   "file": "audio-src/vo/tight/seg8_2.wav",
+   "dur": 1.703,
+   "raw": "audio-src/vo/seg8_2.wav"
+  }
+ ]
+}

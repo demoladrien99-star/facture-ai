@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        @font-face { font-family: "Inter"; font-weight: 900; src: url("assets/fonts/inter-latin-900-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 500; src: url("assets/fonts/inter-latin-500-normal.woff2") format("woff2"); }
+        #root { position: absolute; inset: 0; overflow: hidden; }
+        #s2-bg { position: absolute; inset: 0; background: #0a0a0a; }
+        #s2-stage { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 0 70px 160px; font-family: "Inter", sans-serif; color: #ffffff; text-align: center; }
+        #s2-card { position: relative; width: 900px; padding: 90px 60px 80px; border-radius: 44px; border: 2px solid #232323; display: flex; flex-direction: column; align-items: center; }
+        #s2-beam { position: absolute; inset: -2px; border-radius: 44px; padding: 4px; opacity: 0; --a: 0deg;
+          background: conic-gradient(from var(--a), transparent 0deg 280deg, #ff2d2d 330deg, #ffffff 352deg, transparent 360deg);
+          -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+        #s2-icon { width: 300px; height: 125px; }
+        #s2-icon path { fill: none; stroke: #ffffff; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
+        #s2-stage .m { display: block; overflow: hidden; padding: 30px 12px 10px; margin-top: -26px; }
+        #s2-stage .ln { display: block; font-weight: 900; letter-spacing: -0.04em; line-height: 0.92; }
+        #s2-stage #s2-kick { font-size: 104px; margin-top: 40px; }
+        #s2-num { display: flex; align-items: center; justify-content: center; font-size: 400px; color: #ff2d2d; letter-spacing: -0.06em; line-height: 1; }
+        #s2-tk { display: inline-flex; height: 1em; overflow: hidden; }
+        #s2-tk .col { display: block; height: 1em; overflow: hidden; }
+        #s2-tk .strip { display: flex; flex-direction: column; }
+        #s2-tk .strip span { display: block; height: 1em; }
+        #s2-x { font-size: 0.6em; margin-left: 0.04em; }
+        #s2-sem { font-size: 112px; }
+        #s2-stage #s2-min { font-weight: 500; font-size: 44px; letter-spacing: 0.3em; color: #bdbdbd; margin-top: 14px; }
+        #s2-stage #s2-sub1 { position: relative; font-weight: 500; font-size: 50px; color: #bdbdbd; margin-top: 70px; }
+        #s2-strike { position: absolute; left: -6px; right: -6px; top: 58%; height: 6px; background: #ff2d2d; }
+        #s2-stage #s2-sub2 { font-weight: 900; font-size: 58px; white-space: nowrap; letter-spacing: -0.02em; margin-top: 18px; }
+      </style>
+      <div id="root" data-composition-id="s02-salle" data-width="1080" data-height="1920">
+        <div id="s2-bg" class="clip" data-start="0" data-duration="6" data-track-index="0"></div>
+        <div id="s2-stage" class="clip" data-start="0" data-duration="6" data-track-index="1">
+          <div id="s2-card">
+            <div id="s2-beam"></div>
+            <svg id="s2-icon" viewBox="0 0 240 100" aria-hidden="true">
+              <path pathLength="1" d="M62 50 H178" />
+              <path pathLength="1" d="M30 22 H48 V78 H30 Z" />
+              <path pathLength="1" d="M48 32 H62 V68 H48 Z" />
+              <path pathLength="1" d="M210 22 H192 V78 H210 Z" />
+              <path pathLength="1" d="M192 32 H178 V68 H192 Z" />
+              <path pathLength="1" d="M14 50 H30 M210 50 H226" />
+            </svg>
+            <span class="m"><span id="s2-kick" class="ln">LA SALLE</span></span>
+            <span class="m"><span id="s2-num" class="ln"><span id="s2-tk"></span><span id="s2-x">×</span></span></span>
+            <span class="m"><span id="s2-sem" class="ln">PAR SEMAINE</span></span>
+            <span class="m"><span id="s2-min" class="ln">MINIMUM</span></span>
+            <span class="m"><span id="s2-sub1" class="ln">Pas pour être bodybuilder.<span id="s2-strike"></span></span></span>
+            <span class="m"><span id="s2-sub2" class="ln">Pour ne plus te sentir petit.</span></span>
+          </div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          const H = window.HF10;
+          const id = "s02-salle";
+          const dur = H.scene(id).dur;
+          const v = (i, o) => H.vo(id, i, o);
+          Promise.all([
+            document.fonts.load('900 400px "Inter"'),
+            document.fonts.load('500 50px "Inter"'),
+          ]).then(function () {
+            const tl = gsap.timeline({ paused: true });
+            tl.fromTo("#s2-card", { scale: 0.94, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: H.spring(0.7, 18, 0.5) }, 0);
+            tl.fromTo("#s2-icon path", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.6, ease: "power2.inOut", stagger: 0.05 }, 0.05);
+            H.reveal(tl, "#s2-kick", H.beat(0));
+            H.beam(tl, "#s2-beam", 0.3, dur, 1.6);
+            // "Trois fois par semaine" — ticker lands on the impact
+            H.reveal(tl, "#s2-num", v(1));
+            H.ticker(tl, document.querySelector("#s2-tk"), 3, v(1), 0.6);
+            tl.fromTo("#s2-num", { scale: 1.1 }, { scale: 1, duration: 0.45, ease: H.spring(0.45, 24, 0.45) }, v(1, 0.6));
+            H.reveal(tl, ["#s2-sem", "#s2-min"], v(1, 0.12), { stagger: 0.1 });
+            H.reveal(tl, "#s2-sub1", v(2));
+            tl.fromTo("#s2-strike", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.4, ease: "power3.out" }, v(2, 0.7));
+            H.reveal(tl, "#s2-sub2", v(3));
+            window.__timelines[id] = tl;
+          });
+        })();
+      </script>
+    </template>
+  </body>
+</html>

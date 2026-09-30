@@ -1,0 +1,317 @@
+{
+ "bpm": 110,
+ "beat": 0.5454545454545454,
+ "total": 52.3636,
+ "scenes": [
+  {
+   "id": "s01-hook",
+   "start": 0.0,
+   "dur": 3.8182,
+   "beats": 7,
+   "sentences": [
+    {
+     "line": 1,
+     "idx": 0,
+     "text": "T'es à cinquante secondes de savoir exactement quoi faire pour tout changer.",
+     "start": 0.2727,
+     "dur": 3.083
+    }
+   ]
+  },
+  {
+   "id": "s02-salle",
+   "start": 3.8182,
+   "dur": 6.0,
+   "beats": 11,
+   "sentences": [
+    {
+     "line": 2,
+     "idx": 0,
+     "text": "La salle.",
+     "start": 0.2727,
+     "dur": 1.075
+    },
+    {
+     "line": 2,
+     "idx": 1,
+     "text": "Trois fois par semaine minimum.",
+     "start": 1.5,
+     "dur": 1.464
+    },
+    {
+     "line": 2,
+     "idx": 2,
+     "text": "Pas pour être bodybuilder.",
+     "start": 3.1364,
+     "dur": 1.093
+    },
+    {
+     "line": 2,
+     "idx": 3,
+     "text": "Pour ne plus te sentir petit.",
+     "start": 4.3636,
+     "dur": 1.271
+    }
+   ]
+  },
+  {
+   "id": "s03-eau-sommeil",
+   "start": 9.8182,
+   "dur": 10.3636,
+   "beats": 19,
+   "sentences": [
+    {
+     "line": 3,
+     "idx": 0,
+     "text": "Deux litres d'eau par jour.",
+     "start": 0.2727,
+     "dur": 1.197
+    },
+    {
+     "line": 3,
+     "idx": 1,
+     "text": "Ta peau, ton énergie, ta concentration, tout change.",
+     "start": 1.6364,
+     "dur": 2.729
+    },
+    {
+     "line": 4,
+     "idx": 0,
+     "text": "Dors avant minuit.",
+     "start": 4.7654,
+     "dur": 2.035
+    },
+    {
+     "line": 4,
+     "idx": 1,
+     "text": "La testostérone monte pendant le sommeil.",
+     "start": 6.9545,
+     "dur": 1.671
+    },
+    {
+     "line": 4,
+     "idx": 2,
+     "text": "Huit heures, pas sept.",
+     "start": 8.7273,
+     "dur": 1.073
+    }
+   ]
+  },
+  {
+   "id": "s04-lecture",
+   "start": 20.1818,
+   "dur": 7.0909,
+   "beats": 13,
+   "sentences": [
+    {
+     "line": 5,
+     "idx": 0,
+     "text": "Lis dix pages par jour.",
+     "start": 0.2727,
+     "dur": 1.97
+    },
+    {
+     "line": 5,
+     "idx": 1,
+     "text": "N'importe quel livre qui t'apprend quelque chose.",
+     "start": 2.3182,
+     "dur": 1.899
+    },
+    {
+     "line": 5,
+     "idx": 2,
+     "text": "Dans un an, t'as lu douze livres de plus que tes potes.",
+     "start": 4.3636,
+     "dur": 2.311
+    }
+   ]
+  },
+  {
+   "id": "s05-meditation-entourage",
+   "start": 27.2727,
+   "dur": 13.0909,
+   "beats": 24,
+   "sentences": [
+    {
+     "line": 6,
+     "idx": 0,
+     "text": "Médite cinq minutes le matin.",
+     "start": 0.2727,
+     "dur": 1.668
+    },
+    {
+     "line": 6,
+     "idx": 1,
+     "text": "Pas pour être zen.",
+     "start": 2.0455,
+     "dur": 0.935
+    },
+    {
+     "line": 6,
+     "idx": 2,
+     "text": "Pour que ton cerveau arrête de partir dans tous les sens.",
+     "start": 3.1364,
+     "dur": 2.374
+    },
+    {
+     "line": 7,
+     "idx": 0,
+     "text": "Coupe les gens qui drainent ton énergie.",
+     "start": 5.9104,
+     "dur": 1.663
+    },
+    {
+     "line": 7,
+     "idx": 1,
+     "text": "Pas de drama.",
+     "start": 7.6364,
+     "dur": 1.952
+    },
+    {
+     "line": 7,
+     "idx": 2,
+     "text": "Juste distance.",
+     "start": 9.6818,
+     "dur": 0.989
+    },
+    {
+     "line": 7,
+     "idx": 3,
+     "text": "Ton niveau monte avec ton entourage.",
+     "start": 10.7727,
+     "dur": 1.485
+    }
+   ]
+  },
+  {
+   "id": "s06-recap",
+   "start": 40.3636,
+   "dur": 5.4545,
+   "beats": 10,
+   "sentences": []
+  },
+  {
+   "id": "s07-cta",
+   "start": 45.8182,
+   "dur": 6.5455,
+   "beats": 12,
+   "sentences": [
+    {
+     "line": 8,
+     "idx": 0,
+     "text": "Abonne-toi.",
+     "start": 0.2727,
+     "dur": 0.899
+    },
+    {
+     "line": 8,
+     "idx": 1,
+     "text": "Le prochain conseil arrive vite.",
+     "start": 1.3636,
+     "dur": 1.524
+    },
+    {
+     "line": 8,
+     "idx": 2,
+     "text": "Discord en bio, rejoins maintenant.",
+     "start": 3.0,
+     "dur": 1.703
+    }
+   ]
+  }
+ ],
+ "vo": [
+  {
+   "file": "audio-src/vo/tight/seg1_0.wav",
+   "at": 0.2727
+  },
+  {
+   "file": "audio-src/vo/tight/seg2_0.wav",
+   "at": 4.0909
+  },
+  {
+   "file": "audio-src/vo/tight/seg2_1.wav",
+   "at": 5.3182
+  },
+  {
+   "file": "audio-src/vo/tight/seg2_2.wav",
+   "at": 6.9545
+  },
+  {
+   "file": "audio-src/vo/tight/seg2_3.wav",
+   "at": 8.1818
+  },
+  {
+   "file": "audio-src/vo/tight/seg3_0.wav",
+   "at": 10.0909
+  },
+  {
+   "file": "audio-src/vo/tight/seg3_1.wav",
+   "at": 11.4545
+  },
+  {
+   "file": "audio-src/vo/tight/seg4_0.wav",
+   "at": 14.5835
+  },
+  {
+   "file": "audio-src/vo/tight/seg4_1.wav",
+   "at": 16.7727
+  },
+  {
+   "file": "audio-src/vo/tight/seg4_2.wav",
+   "at": 18.5455
+  },
+  {
+   "file": "audio-src/vo/tight/seg5_0.wav",
+   "at": 20.4545
+  },
+  {
+   "file": "audio-src/vo/tight/seg5_1.wav",
+   "at": 22.5
+  },
+  {
+   "file": "audio-src/vo/tight/seg5_2.wav",
+   "at": 24.5455
+  },
+  {
+   "file": "audio-src/vo/tight/seg6_0.wav",
+   "at": 27.5455
+  },
+  {
+   "file": "audio-src/vo/tight/seg6_1.wav",
+   "at": 29.3182
+  },
+  {
+   "file": "audio-src/vo/tight/seg6_2.wav",
+   "at": 30.4091
+  },
+  {
+   "file": "audio-src/vo/tight/seg7_0.wav",
+   "at": 33.1831
+  },
+  {
+   "file": "audio-src/vo/tight/seg7_1.wav",
+   "at": 34.9091
+  },
+  {
+   "file": "audio-src/vo/tight/seg7_2.wav",
+   "at": 36.9545
+  },
+  {
+   "file": "audio-src/vo/tight/seg7_3.wav",
+   "at": 38.0455
+  },
+  {
+   "file": "audio-src/vo/tight/seg8_0.wav",
+   "at": 46.0909
+  },
+  {
+   "file": "audio-src/vo/tight/seg8_1.wav",
+   "at": 47.1818
+  },
+  {
+   "file": "audio-src/vo/tight/seg8_2.wav",
+   "at": 48.8182
+  }
+ ]
+}

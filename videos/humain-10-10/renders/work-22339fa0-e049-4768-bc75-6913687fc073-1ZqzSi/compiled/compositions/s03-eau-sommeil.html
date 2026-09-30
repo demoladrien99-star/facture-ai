@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        @font-face { font-family: "Inter"; font-weight: 900; src: url("assets/fonts/inter-latin-900-normal.woff2") format("woff2"); }
+        @font-face { font-family: "Inter"; font-weight: 500; src: url("assets/fonts/inter-latin-500-normal.woff2") format("woff2"); }
+        #root { position: absolute; inset: 0; overflow: hidden; }
+        #s3-bg { position: absolute; inset: 0; background: #0a0a0a; }
+        #s3-stage { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 70px 160px; font-family: "Inter", sans-serif; color: #ffffff; }
+        #s3-kick { font-weight: 900; font-size: 44px; letter-spacing: 0.36em; color: #ff2d2d; margin-bottom: 70px; }
+        #s3-list { display: flex; flex-direction: column; gap: 44px; width: 940px; }
+        #s3-stage .card { display: flex; align-items: center; gap: 48px; padding: 60px 56px; border-radius: 40px; background: #141414; border: 2px solid #262626; }
+        #s3-stage .ico { flex: 0 0 150px; width: 150px; height: 150px; }
+        #s3-stage .ico path { fill: none; stroke: #ffffff; stroke-width: 8; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
+        #s3-stage .txt { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+        #s3-stage .ttl { font-weight: 900; font-size: 100px; line-height: 0.92; letter-spacing: -0.04em; }
+        #s3-stage .red { color: #ff2d2d; }
+        #s3-stage .sub { font-weight: 500; font-size: 44px; line-height: 1.2; color: #bdbdbd; display: flex; flex-wrap: wrap; column-gap: 14px; }
+        #s3-stage .w { display: inline-block; }
+        #s3-stage .sub .hl { color: #ff2d2d; font-weight: 900; }
+      </style>
+      <div id="root" data-composition-id="s03-eau-sommeil" data-width="1080" data-height="1920">
+        <div id="s3-bg" class="clip" data-start="0" data-duration="10.3636" data-track-index="0"></div>
+        <div id="s3-stage" class="clip" data-start="0" data-duration="10.3636" data-track-index="1">
+          <div id="s3-kick">PHYSIQUE</div>
+          <div id="s3-list">
+            <div id="s3-c1" class="card">
+              <svg class="ico" viewBox="0 0 120 130" aria-hidden="true">
+                <path pathLength="1" d="M60 12 C60 12 22 60 22 84 A38 38 0 0 0 98 84 C98 60 60 12 60 12 Z" />
+                <path pathLength="1" d="M42 88 A18 18 0 0 0 58 104" />
+              </svg>
+              <div class="txt">
+                <div class="ttl"><span class="red">2L</span> D'EAU</div>
+                <div class="sub"><span id="s3-w1" class="w">Peau.</span><span id="s3-w2" class="w">Énergie.</span><span id="s3-w3" class="w">Concentration.</span></div>
+              </div>
+            </div>
+            <div id="s3-c2" class="card">
+              <svg class="ico" viewBox="0 0 130 130" aria-hidden="true">
+                <path pathLength="1" d="M80 16 A52 52 0 1 0 116 88 A42 42 0 1 1 80 16 Z" />
+              </svg>
+              <div class="txt">
+                <div class="ttl" style="font-size: 92px"><span style="display: block; white-space: nowrap">DORS AVANT</span><span class="red">MINUIT</span></div>
+                <div class="sub"><span id="s3-h" class="w hl">8h.</span><span id="s3-w4" class="w">Testo qui monte.</span><span id="s3-w5" class="w">Pas 7.</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          const H = window.HF10;
+          const id = "s03-eau-sommeil";
+          const v = (i, o) => H.vo(id, i, o);
+          Promise.all([
+            document.fonts.load('900 100px "Inter"'),
+            document.fonts.load('500 44px "Inter"'),
+          ]).then(function () {
+            const tl = gsap.timeline({ paused: true });
+            const c2 = document.querySelector("#s3-c2");
+            const shift = (c2.offsetHeight + 44) / 2;
+            const pop = H.spring(0.55, 20, 0.6);
+            tl.fromTo("#s3-kick", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 0);
+            // Animated List: the stack starts centred on card 1, then makes room for card 2
+            tl.fromTo("#s3-list", { y: shift }, { y: 0, duration: 0.6, ease: pop }, v(2));
+            tl.fromTo("#s3-c1", { y: 260, scale: 0.86, opacity: 0 }, { y: 0, scale: 1, opacity: 1, duration: 0.6, ease: pop }, v(0));
+            tl.fromTo("#s3-c1 .ico path", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.7, ease: "power2.inOut" }, v(0, 0.1));
+            tl.fromTo("#s3-w1", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, v(1, 0.25));
+            tl.fromTo("#s3-w2", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, v(1, 0.85));
+            tl.fromTo("#s3-w3", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, v(1, 1.45));
+            tl.to("#s3-c1", { opacity: 0.7, duration: 0.4, ease: "power2.out" }, v(2));
+            tl.fromTo("#s3-c2", { y: 260, scale: 0.86, opacity: 0 }, { y: 0, scale: 1, opacity: 1, duration: 0.6, ease: pop }, v(2));
+            tl.fromTo("#s3-c2 .ico path", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.7, ease: "power2.inOut" }, v(2, 0.1));
+            tl.fromTo(["#s3-h", "#s3-w4"], { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.15 }, v(3));
+            tl.fromTo("#s3-h", { scale: 1 }, { scale: 1.35, duration: 0.14, ease: "power2.out", yoyo: true, repeat: 1 }, v(4));
+            tl.fromTo("#s3-w5", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, v(4, 0.5));
+            window.__timelines[id] = tl;
+          });
+        })();
+      </script>
+    </template>
+  </body>
+</html>
