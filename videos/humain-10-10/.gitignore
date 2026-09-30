@@ -5,3 +5,4 @@ snapshots/
 .hyperframes/
 audio-src/vo_raw.wav
 renders/work-*/
+renders/.*hf-transaction*/
